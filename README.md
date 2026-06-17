@@ -20,7 +20,13 @@ npm run preview
 
 ```sh
 docker build -t vb-gha-demo-app .
-docker run --rm -p PORT:80 vb-gha-demo-app
+docker run --rm -p 8081:80 vb-gha-demo-app
 ```
 
-Open `http://localhost:PORT`.
+Open `http://localhost:8081`.
+
+Health check:
+
+```sh
+curl http://localhost:8081/health
+```
